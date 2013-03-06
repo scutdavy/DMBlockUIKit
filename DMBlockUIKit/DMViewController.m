@@ -7,7 +7,7 @@
 //
 
 #import "DMViewController.h"
-#import "DMAlertView.h"
+#import "DMUIAlertView.h"
 #import "DMUIActionSheet.h"
 
 @interface DMViewController ()
@@ -37,7 +37,7 @@
 }
 
 - (void) action{
-    DMAlertView *alert = [DMAlertView alertViewWithTitle:@"title" message:@"message"];
+    DMUIAlertView *alert = [DMUIAlertView alertViewWithTitle:@"title" message:@"message"];
     [alert addButtonWithTitle:@"button1" action:^{
         NSLog(@"button1");
     }];

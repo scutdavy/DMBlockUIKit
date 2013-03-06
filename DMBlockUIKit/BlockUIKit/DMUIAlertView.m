@@ -6,10 +6,10 @@
 //  Copyright (c) 2013年 domi network. All rights reserved.
 //
 
-#import "DMAlertView.h"
+#import "DMUIAlertView.h"
 #import <objc/runtime.h>
 
-@interface DMAlertView ()
+@interface DMUIAlertView ()
 @property (nonatomic, strong) NSArray *titles;
 @property (nonatomic, strong) NSArray *actions;
 @property (nonatomic, copy, readonly) NSString *title;
@@ -17,7 +17,7 @@
 @property (nonatomic, strong) UIAlertView *alertView;
 @end
 
-@implementation DMAlertView
+@implementation DMUIAlertView
 
 - (void) dealloc{
     

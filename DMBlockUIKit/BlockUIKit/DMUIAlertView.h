@@ -10,7 +10,7 @@
 #import "DMUIBlockType.h"
 
 
-@interface DMAlertView : NSObject
+@interface DMUIAlertView : NSObject
 /** Creates and returns a new alert view with only a title and cancel button.
  
  @param title The title of the alert view.
