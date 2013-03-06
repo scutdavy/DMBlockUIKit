@@ -57,6 +57,7 @@
     [sheet addButtonWithTitle:@"button3" action:^{
         NSLog(@"button3");
     }];
+    [sheet addButtonWithTitle:@"title4" action:NULL];
     [sheet addDestructiveButtonWithTitle:@"cancel" action:^{
         NSLog(@"cancel");
     }];

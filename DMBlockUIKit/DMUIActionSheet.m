@@ -68,9 +68,9 @@
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    DMUIBlock block = self.actions[buttonIndex];
-    if (![(id) block isKindOfClass:[NSNull class]]) {
-        block();
+    id block = self.actions[buttonIndex];
+    if (block != [NSNull null]) {
+        ((DMUIBlock)block)();
     }
     objc_removeAssociatedObjects(self.actionSheet);
 }
