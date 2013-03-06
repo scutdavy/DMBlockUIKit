@@ -43,10 +43,15 @@
 
 - (void)addButtonWithTitle:(NSString *)title action:(DMBlock)block{
     NSParameterAssert(title);
-    NSParameterAssert(block);
     
     self.titles = [self.titles arrayByAddingObject:title];
-    self.actions = [self.actions arrayByAddingObject:block];
+    id blockOrNull = [block copy] ?: [NSNull null];
+    self.actions = [self.actions arrayByAddingObject:blockOrNull];
+    
+}
+
+- (void) addButtonWithTitle:(NSString *)title{
+    [self addButtonWithTitle:title action:NULL];
 }
 
 - (const void *) associateKey{
@@ -64,7 +69,9 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     DMBlock block = self.actions[buttonIndex];
-    block();
+    if (![(id)block isKindOfClass:[NSNull class]]) {
+        block();
+    }
     objc_removeAssociatedObjects(self.alertView);
 }
 @end

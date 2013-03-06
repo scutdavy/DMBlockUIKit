@@ -24,6 +24,7 @@
     [button sizeToFit];
     [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
 }
 
 - (void) action{
@@ -32,11 +33,10 @@
         NSLog(@"button1");
     }];
     
-    [alert addButtonWithTitle:@"button2" action:^{
-        NSLog(@"button2");
-    }];
+    [alert addButtonWithTitle:@"button2"];
     [alert show];
 }
+
 
 - (void)didReceiveMemoryWarning
 {

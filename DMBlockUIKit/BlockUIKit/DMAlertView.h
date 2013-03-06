@@ -34,6 +34,10 @@ typedef void (^DMBlock)(void); // compatible with dispatch_block_t
  */
 - (void)addButtonWithTitle:(NSString *)title action:(DMBlock)block;
 
+/** Add a new Button without block */
+
+- (void) addButtonWithTitle:(NSString *)title;
+
 
 /** show alert view
  */
