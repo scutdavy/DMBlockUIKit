@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef void (^DMBlock)(void); // compatible with dispatch_block_t
+#import "DMUIBlockType.h"
 
 
 @interface DMAlertView : NSObject
@@ -32,7 +31,7 @@ typedef void (^DMBlock)(void); // compatible with dispatch_block_t
  @param title The text of the button.
  @param block A block of code.
  */
-- (void)addButtonWithTitle:(NSString *)title action:(DMBlock)block;
+- (void)addButtonWithTitle:(NSString *)title action:(DMUIBlock)block;
 
 /** Add a new Button without block */
 

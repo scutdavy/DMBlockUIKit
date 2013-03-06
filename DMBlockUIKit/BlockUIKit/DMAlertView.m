@@ -41,7 +41,7 @@
     return [[self alloc] initWithTitle:title message:message];
 }
 
-- (void)addButtonWithTitle:(NSString *)title action:(DMBlock)block{
+- (void)addButtonWithTitle:(NSString *)title action:(DMUIBlock)block{
     NSParameterAssert(title);
     
     self.titles = [self.titles arrayByAddingObject:title];
@@ -68,7 +68,7 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    DMBlock block = self.actions[buttonIndex];
+    DMUIBlock block = self.actions[buttonIndex];
     if (![(id)block isKindOfClass:[NSNull class]]) {
         block();
     }

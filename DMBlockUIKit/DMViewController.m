@@ -8,6 +8,7 @@
 
 #import "DMViewController.h"
 #import "DMAlertView.h"
+#import "DMUIActionSheet.h"
 
 @interface DMViewController ()
 
@@ -25,6 +26,14 @@
     [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button1 setTitle:@"actionSheet" forState:UIControlStateNormal];
+    [button1 sizeToFit];
+    [button1 addTarget:self action:@selector(actionSheet) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button1];
+    
+    button1.frame = CGRectMake(100, 100, CGRectGetWidth(button1.frame), CGRectGetHeight(button1.frame));
+    
 }
 
 - (void) action{
@@ -35,6 +44,23 @@
     
     [alert addButtonWithTitle:@"button2"];
     [alert show];
+}
+
+- (void) actionSheet{
+   DMUIActionSheet *sheet = [DMUIActionSheet actionSheetWithTitle:@"title"];
+    [sheet addButtonWithTitle:@"button1" action:^{
+        NSLog(@"button1");
+    }];
+    [sheet addButtonWithTitle:@"button2" action:^{
+        NSLog(@"button2");
+    }];
+    [sheet addButtonWithTitle:@"button3" action:^{
+        NSLog(@"button3");
+    }];
+    [sheet addDestructiveButtonWithTitle:@"cancel" action:^{
+        NSLog(@"cancel");
+    }];
+   [sheet showInView:self.view];
 }
 
 
