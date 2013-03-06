@@ -44,6 +44,10 @@
     self.actions = [self.actions arrayByAddingObject:blockOrNull];
 }
 
+- (void) addButtonWithTitle:(NSString *)title{
+    [self addButtonWithTitle:title action:NULL];
+}
+
 - (void)addDestructiveButtonWithTitle:(NSString *)title action:(DMUIBlock)block{
     [self addButtonWithTitle:title action:block];
     self.destructiveIndex = @( [self.titles count] - 1 );

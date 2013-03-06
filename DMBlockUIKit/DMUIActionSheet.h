@@ -35,6 +35,11 @@
  */
 - (void)addButtonWithTitle:(NSString *)title action:(DMUIBlock)block;
 
+
+/** add button without action */
+- (void) addButtonWithTitle:(NSString *)title;
+
+
 /** Set the destructive (red) button with an associated code block.
  
  @warning Because buttons cannot be removed from an action sheet,
