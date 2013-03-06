@@ -7,6 +7,7 @@
 //
 
 #import "DMViewController.h"
+#import "DMAlertView.h"
 
 @interface DMViewController ()
 
@@ -18,6 +19,23 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button setTitle:@"alertView" forState:UIControlStateNormal];
+    [button sizeToFit];
+    [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void) action{
+    DMAlertView *alert = [DMAlertView alertViewWithTitle:@"title" message:@"message"];
+    [alert addButtonWithTitle:@"button1" action:^{
+        NSLog(@"button1");
+    }];
+    
+    [alert addButtonWithTitle:@"button2" action:^{
+        NSLog(@"button2");
+    }];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning

@@ -24,6 +24,8 @@
 		BCDDF6B516E7295F007C3AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDDF68D16E7295F007C3AE9 /* Foundation.framework */; };
 		BCDDF6BD16E7295F007C3AE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCDDF6BB16E7295F007C3AE9 /* InfoPlist.strings */; };
 		BCDDF6C016E7295F007C3AE9 /* DMBlockUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6BF16E7295F007C3AE9 /* DMBlockUIKitTests.m */; };
+		BCDDF6CC16E72A08007C3AE9 /* DMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6CB16E72A08007C3AE9 /* DMAlertView.m */; };
+		BCDDF6CD16E72A08007C3AE9 /* DMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6CB16E72A08007C3AE9 /* DMAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		BCDDF6BC16E7295F007C3AE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BCDDF6BE16E7295F007C3AE9 /* DMBlockUIKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMBlockUIKitTests.h; sourceTree = "<group>"; };
 		BCDDF6BF16E7295F007C3AE9 /* DMBlockUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMBlockUIKitTests.m; sourceTree = "<group>"; };
+		BCDDF6CA16E72A08007C3AE9 /* DMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMAlertView.h; path = BlockUIKit/DMAlertView.h; sourceTree = "<group>"; };
+		BCDDF6CB16E72A08007C3AE9 /* DMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMAlertView.m; path = BlockUIKit/DMAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		BCDDF67F16E7295E007C3AE9 = {
 			isa = PBXGroup;
 			children = (
+				BCDDF6C916E7297A007C3AE9 /* Demo */,
 				BCDDF69116E7295F007C3AE9 /* DMBlockUIKit */,
 				BCDDF6B816E7295F007C3AE9 /* DMBlockUIKitTests */,
 				BCDDF68A16E7295F007C3AE9 /* Frameworks */,
@@ -119,13 +124,8 @@
 		BCDDF69116E7295F007C3AE9 /* DMBlockUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				BCDDF69A16E7295F007C3AE9 /* DMAppDelegate.h */,
-				BCDDF69B16E7295F007C3AE9 /* DMAppDelegate.m */,
-				BCDDF6A316E7295F007C3AE9 /* DMViewController.h */,
-				BCDDF6A416E7295F007C3AE9 /* DMViewController.m */,
-				BCDDF6A616E7295F007C3AE9 /* DMViewController_iPhone.xib */,
-				BCDDF6A916E7295F007C3AE9 /* DMViewController_iPad.xib */,
-				BCDDF69216E7295F007C3AE9 /* Supporting Files */,
+				BCDDF6CA16E72A08007C3AE9 /* DMAlertView.h */,
+				BCDDF6CB16E72A08007C3AE9 /* DMAlertView.m */,
 			);
 			path = DMBlockUIKit;
 			sourceTree = "<group>";
@@ -161,6 +161,21 @@
 				BCDDF6BB16E7295F007C3AE9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCDDF6C916E7297A007C3AE9 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				BCDDF69216E7295F007C3AE9 /* Supporting Files */,
+				BCDDF69A16E7295F007C3AE9 /* DMAppDelegate.h */,
+				BCDDF69B16E7295F007C3AE9 /* DMAppDelegate.m */,
+				BCDDF6A316E7295F007C3AE9 /* DMViewController.h */,
+				BCDDF6A416E7295F007C3AE9 /* DMViewController.m */,
+				BCDDF6A616E7295F007C3AE9 /* DMViewController_iPhone.xib */,
+				BCDDF6A916E7295F007C3AE9 /* DMViewController_iPad.xib */,
+			);
+			name = Demo;
+			path = DMBlockUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +293,7 @@
 				BCDDF69816E7295F007C3AE9 /* main.m in Sources */,
 				BCDDF69C16E7295F007C3AE9 /* DMAppDelegate.m in Sources */,
 				BCDDF6A516E7295F007C3AE9 /* DMViewController.m in Sources */,
+				BCDDF6CC16E72A08007C3AE9 /* DMAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCDDF6C016E7295F007C3AE9 /* DMBlockUIKitTests.m in Sources */,
+				BCDDF6CD16E72A08007C3AE9 /* DMAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
