@@ -24,10 +24,10 @@
 		BCDDF6B516E7295F007C3AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDDF68D16E7295F007C3AE9 /* Foundation.framework */; };
 		BCDDF6BD16E7295F007C3AE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCDDF6BB16E7295F007C3AE9 /* InfoPlist.strings */; };
 		BCDDF6C016E7295F007C3AE9 /* DMBlockUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6BF16E7295F007C3AE9 /* DMBlockUIKitTests.m */; };
-		BCDDF6CC16E72A08007C3AE9 /* DMUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6CB16E72A08007C3AE9 /* DMUIAlertView.m */; };
-		BCDDF6CD16E72A08007C3AE9 /* DMUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6CB16E72A08007C3AE9 /* DMUIAlertView.m */; };
-		BCDDF6D716E73D94007C3AE9 /* DMUIActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6D616E73D94007C3AE9 /* DMUIActionSheet.m */; };
-		BCDDF6D816E73D94007C3AE9 /* DMUIActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6D616E73D94007C3AE9 /* DMUIActionSheet.m */; };
+		BCDDF6DF16E82044007C3AE9 /* DMUIActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6DC16E82044007C3AE9 /* DMUIActionSheet.m */; };
+		BCDDF6E016E82044007C3AE9 /* DMUIActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6DC16E82044007C3AE9 /* DMUIActionSheet.m */; };
+		BCDDF6E116E82044007C3AE9 /* DMUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6DD16E82044007C3AE9 /* DMUIAlertView.m */; };
+		BCDDF6E216E82044007C3AE9 /* DMUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDF6DD16E82044007C3AE9 /* DMUIAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +64,11 @@
 		BCDDF6BC16E7295F007C3AE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BCDDF6BE16E7295F007C3AE9 /* DMBlockUIKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMBlockUIKitTests.h; sourceTree = "<group>"; };
 		BCDDF6BF16E7295F007C3AE9 /* DMBlockUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMBlockUIKitTests.m; sourceTree = "<group>"; };
-		BCDDF6CA16E72A08007C3AE9 /* DMUIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMUIAlertView.h; path = BlockUIKit/DMUIAlertView.h; sourceTree = "<group>"; };
-		BCDDF6CB16E72A08007C3AE9 /* DMUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMUIAlertView.m; path = BlockUIKit/DMUIAlertView.m; sourceTree = "<group>"; };
-		BCDDF6D516E73D94007C3AE9 /* DMUIActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUIActionSheet.h; sourceTree = "<group>"; };
-		BCDDF6D616E73D94007C3AE9 /* DMUIActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUIActionSheet.m; sourceTree = "<group>"; };
-		BCDDF6D916E73E79007C3AE9 /* DMUIBlockType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUIBlockType.h; sourceTree = "<group>"; };
+		BCDDF6DA16E82044007C3AE9 /* DMUIActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMUIActionSheet.h; path = BlockUIKit/DMUIActionSheet.h; sourceTree = "<group>"; };
+		BCDDF6DB16E82044007C3AE9 /* DMUIBlockType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMUIBlockType.h; path = BlockUIKit/DMUIBlockType.h; sourceTree = "<group>"; };
+		BCDDF6DC16E82044007C3AE9 /* DMUIActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMUIActionSheet.m; path = BlockUIKit/DMUIActionSheet.m; sourceTree = "<group>"; };
+		BCDDF6DD16E82044007C3AE9 /* DMUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMUIAlertView.m; path = BlockUIKit/DMUIAlertView.m; sourceTree = "<group>"; };
+		BCDDF6DE16E82044007C3AE9 /* DMUIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMUIAlertView.h; path = BlockUIKit/DMUIAlertView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +129,11 @@
 		BCDDF69116E7295F007C3AE9 /* DMBlockUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				BCDDF6CA16E72A08007C3AE9 /* DMUIAlertView.h */,
-				BCDDF6CB16E72A08007C3AE9 /* DMUIAlertView.m */,
-				BCDDF6D516E73D94007C3AE9 /* DMUIActionSheet.h */,
-				BCDDF6D616E73D94007C3AE9 /* DMUIActionSheet.m */,
-				BCDDF6D916E73E79007C3AE9 /* DMUIBlockType.h */,
+				BCDDF6DA16E82044007C3AE9 /* DMUIActionSheet.h */,
+				BCDDF6DB16E82044007C3AE9 /* DMUIBlockType.h */,
+				BCDDF6DC16E82044007C3AE9 /* DMUIActionSheet.m */,
+				BCDDF6DD16E82044007C3AE9 /* DMUIAlertView.m */,
+				BCDDF6DE16E82044007C3AE9 /* DMUIAlertView.h */,
 			);
 			path = DMBlockUIKit;
 			sourceTree = "<group>";
@@ -301,8 +301,8 @@
 				BCDDF69816E7295F007C3AE9 /* main.m in Sources */,
 				BCDDF69C16E7295F007C3AE9 /* DMAppDelegate.m in Sources */,
 				BCDDF6A516E7295F007C3AE9 /* DMViewController.m in Sources */,
-				BCDDF6CC16E72A08007C3AE9 /* DMUIAlertView.m in Sources */,
-				BCDDF6D716E73D94007C3AE9 /* DMUIActionSheet.m in Sources */,
+				BCDDF6DF16E82044007C3AE9 /* DMUIActionSheet.m in Sources */,
+				BCDDF6E116E82044007C3AE9 /* DMUIAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,8 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCDDF6C016E7295F007C3AE9 /* DMBlockUIKitTests.m in Sources */,
-				BCDDF6CD16E72A08007C3AE9 /* DMUIAlertView.m in Sources */,
-				BCDDF6D816E73D94007C3AE9 /* DMUIActionSheet.m in Sources */,
+				BCDDF6E016E82044007C3AE9 /* DMUIActionSheet.m in Sources */,
+				BCDDF6E216E82044007C3AE9 /* DMUIAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
