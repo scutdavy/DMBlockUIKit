@@ -9,11 +9,8 @@
 #import "DMUIAlertView.h"
 #import <objc/runtime.h>
 
-@interface DMUIAlertView ()
-@property (nonatomic, strong) NSArray *titles;
+@interface DMUIAlertView ()<UIAlertViewDelegate>
 @property (nonatomic, strong) NSArray *actions;
-@property (nonatomic, copy, readonly) NSString *title;
-@property (nonatomic, copy, readonly) NSString *message;
 @property (nonatomic, strong) UIAlertView *alertView;
 @end
 
@@ -26,10 +23,8 @@
 - (instancetype) initWithTitle:(NSString *) title message:(NSString *) message{
     self = [super init];
     if (self == nil) return nil;
-    _title = title;
-    _message = message;
-    _titles = @[];
     _actions = @[];
+    _alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
     return self;
 }
 
@@ -44,7 +39,7 @@
 - (void)addButtonWithTitle:(NSString *)title action:(DMUIBlock)block{
     NSParameterAssert(title);
     
-    self.titles = [self.titles arrayByAddingObject:title];
+    [self.alertView addButtonWithTitle:title];
     id blockOrNull = [block copy] ?: [NSNull null];
     self.actions = [self.actions arrayByAddingObject:blockOrNull];
     
@@ -59,19 +54,29 @@
 }
 
 - (void) show{
-    self.alertView = [[UIAlertView alloc] initWithTitle:self.title message:self.message delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
-    [self.titles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [self.alertView addButtonWithTitle:obj];
-    }];
-	objc_setAssociatedObject(self.alertView, [self associateKey], self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self addRetainCircle];
     [self.alertView show];
 }
 
+- (void) addRetainCircle{
+	objc_setAssociatedObject(self.alertView, [self associateKey], self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (void) breakCircle{
+    self.alertView = nil;
+}
+
+#pragma mark - delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     id block = self.actions[buttonIndex];
     if (block != [NSNull null]) {
         ((DMUIBlock)block)();
     }
-    objc_removeAssociatedObjects(self.alertView);
+    [self breakCircle];
 }
+
+- (void) alertViewCancel:(UIAlertView *)alertView{
+    [self breakCircle];
+}
+
 @end
