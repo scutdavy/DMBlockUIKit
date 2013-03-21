@@ -8,7 +8,7 @@
 
 #import "DMViewController.h"
 #import "DMUIAlertView.h"
-#import "DMUIActionSheet.h"
+#import "UIActionSheet+DMUIBlockKit.h"
 
 @interface DMViewController ()
 
@@ -47,21 +47,25 @@
 }
 
 - (void) actionSheet{
-   DMUIActionSheet *sheet = [DMUIActionSheet actionSheetWithTitle:@"title"];
-    [sheet addButtonWithTitle:@"button1" action:^{
-        NSLog(@"button1");
+   UIActionSheet *sheet = [UIActionSheet DMUIActionSheetWithTitle:@"title"];
+    [sheet DMUIAddButtonWithTitle:@"button1" action:^{
+        [self log:@"button1"];
     }];
-    [sheet addButtonWithTitle:@"button2" action:^{
+    [sheet DMUIAddButtonWithTitle:@"button2" action:^{
         NSLog(@"button2");
     }];
-    [sheet addButtonWithTitle:@"button3" action:^{
+    [sheet DMUIAddButtonWithTitle:@"button3" action:^{
         NSLog(@"button3");
     }];
-    [sheet addButtonWithTitle:@"button4"];
-    [sheet addDestructiveButtonWithTitle:@"cancel" action:^{
+    [sheet DMUIAddButtonWithTitle:@"button4"];
+    [sheet DMUIAddDestructiveButtonWithTitle:@"cancel" action:^{
         NSLog(@"cancel");
     }];
    [sheet showInView:self.view];
+}
+
+- (void) log:(NSString *) msg{
+    NSLog(@"%@", msg);
 }
 
 
