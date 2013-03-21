@@ -19,19 +19,18 @@ So I implement the block based alertView & actionSheet in a simple way. the code
 DMUIActionSheet
 
 ```
-   DMUIActionSheet *sheet = [DMUIActionSheet actionSheetWithTitle:@"title"];
-   
-    [sheet addButtonWithTitle:@"button1" action:^{
-        NSLog(@"button1");
+   UIActionSheet *sheet = [UIActionSheet DMUIActionSheetWithTitle:@"title"];
+    [sheet DMUIAddButtonWithTitle:@"button1" action:^{
+        [self log:@"button1"];
     }];
-    [sheet addButtonWithTitle:@"button2" action:^{
+    [sheet DMUIAddButtonWithTitle:@"button2" action:^{
         NSLog(@"button2");
     }];
-    [sheet addButtonWithTitle:@"button3" action:^{
+    [sheet DMUIAddButtonWithTitle:@"button3" action:^{
         NSLog(@"button3");
     }];
-    [sheet addButtonWithTitle:@"button4"];
-    [sheet addDestructiveButtonWithTitle:@"cancel" action:^{
+    [sheet DMUIAddButtonWithTitle:@"button4"];
+    [sheet DMUIAddDestructiveButtonWithTitle:@"cancel" action:^{
         NSLog(@"cancel");
     }];
    [sheet showInView:self.view];
@@ -40,12 +39,12 @@ DMUIActionSheet
 DMUIAlertView:
 
 ```
-    DMUIAlertView *alert = [DMUIAlertView alertViewWithTitle:@"title" message:@"message"];
-    [alert addButtonWithTitle:@"button1" action:^{
+    UIAlertView *alert = [UIAlertView DMUIAlertViewWithTitle:@"title" message:@"message"];
+    [alert DMUIAddButtonWithTitle:@"button1" action:^{
         NSLog(@"button1");
     }];
     
-    [alert addButtonWithTitle:@"button2"];
+    [alert DMUIAddButtonWithTitle:@"button2"];
     [alert show];
 ```
 
