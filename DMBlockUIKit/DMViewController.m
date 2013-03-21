@@ -7,8 +7,8 @@
 //
 
 #import "DMViewController.h"
-#import "DMUIAlertView.h"
 #import "UIActionSheet+DMUIBlockKit.h"
+#import "UIAlertView+DMUIBlockKit.h"
 
 @interface DMViewController ()
 
@@ -37,12 +37,12 @@
 }
 
 - (void) action{
-    DMUIAlertView *alert = [DMUIAlertView alertViewWithTitle:@"title" message:@"message"];
-    [alert addButtonWithTitle:@"button1" action:^{
+    UIAlertView *alert = [UIAlertView DMUIAlertViewWithTitle:@"title" message:@"message"];
+    [alert DMUIAddButtonWithTitle:@"button1" action:^{
         NSLog(@"button1");
     }];
     
-    [alert addButtonWithTitle:@"button2"];
+    [alert DMUIAddButtonWithTitle:@"button2"];
     [alert show];
 }
 
