@@ -68,6 +68,9 @@
 
 #pragma mark - delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSParameterAssert(buttonIndex < [self.actions count]);
+    if (buttonIndex >= [self.actions count]) return;
+    
     id block = self.actions[buttonIndex];
     if (block != [NSNull null]) {
         ((DMUIBlock)block)();
