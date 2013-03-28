@@ -48,6 +48,7 @@
 
 - (void) actionSheet{
    DMUIActionSheet *sheet = [DMUIActionSheet actionSheetWithTitle:@"title"];
+    sheet.actionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     [sheet addButtonWithTitle:@"button1" action:^{
         NSLog(@"button1");
     }];

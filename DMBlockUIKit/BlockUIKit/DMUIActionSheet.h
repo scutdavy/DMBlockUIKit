@@ -12,6 +12,10 @@
 @interface DMUIActionSheet : NSObject
 
 
+
+@property (nonatomic, strong, readonly) UIActionSheet *actionSheet;
+
+
 ///-----------------------------------
 /// @name Creating action sheets
 ///-----------------------------------

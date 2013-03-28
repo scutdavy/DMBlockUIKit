@@ -11,6 +11,9 @@
 
 
 @interface DMUIAlertView : NSObject
+
+@property (nonatomic, strong, readonly) UIAlertView *alertView;
+
 /** Creates and returns a new alert view with only a title and cancel button.
  
  @param title The title of the alert view.
