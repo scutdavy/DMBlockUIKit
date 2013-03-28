@@ -49,3 +49,5 @@ DMUIAlertView:
     [alert show];
 ```
 
+##Installation
+add `pod 'DMBlockUIKit', :git => 'https://github.com/scutdavy/DMBlockUIKit.git'` to your Podfile. 
