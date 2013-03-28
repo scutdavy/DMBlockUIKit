@@ -1,4 +1,9 @@
+caution: catagory style implementation will conflict with  [Blockit](https://github.com/pandamonia/BlocksKit). if you need use both, try `wrapper` branch.
+
+
 # DMBlockUIKit
+
+
 
 simple wrapper for UIAlertView & UIActionSheet to support block based call back.
 
